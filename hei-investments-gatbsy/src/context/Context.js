@@ -1,13 +1,17 @@
 import React, { createContext, useState } from "react";
 
-export const GlobalContext = createContext();
+
+const defaultContext = {
+  menuOpen: ''
+};
+export const GlobalContext = createContext(defaultContext);
 
 const GlobalProvider = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log(menuOpen);
+
   };
 
   return (
