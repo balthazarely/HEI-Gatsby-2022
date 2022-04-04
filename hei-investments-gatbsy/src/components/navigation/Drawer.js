@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { GlobalContext } from "../../context/Context";
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
@@ -31,7 +31,7 @@ const item = {
 };
 
 export const Drawer = ({ navLinks }) => {
-  const { toggleMenu, menuOpen } = React.useContext(GlobalContext);
+  const { toggleMenu, menuOpen } = useContext(GlobalContext);
 
   return (
     <motion.ul
@@ -48,7 +48,7 @@ export const Drawer = ({ navLinks }) => {
           <Link
             to={link.link}
             activeClassName="active--nav--mobile"
-            className="opacity-50 duration-200 hover:opacity-100"
+            className="duration-200 opacity-50 hover:opacity-100"
           >
             {link.name}
           </Link>

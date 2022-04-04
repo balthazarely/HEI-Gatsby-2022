@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext} from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 import Navbar from '../navigation/Navbar'
@@ -23,7 +23,7 @@ const variants = {
 }
 
 const Layout = ({ children, location }) => {
-    const { menuOpen } = React.useContext(GlobalContext)
+    const { menuOpen } = useContext(GlobalContext)
 
     return (
         <div
