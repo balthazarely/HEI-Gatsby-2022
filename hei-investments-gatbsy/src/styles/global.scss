@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$color-primary: #3eb0ef;
+$color-base: #131313;
+$color-border: #ddd;
+$color-bg: #f8f8f8;
+
+/* Fonts */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  @apply text-theme-base
+}
+

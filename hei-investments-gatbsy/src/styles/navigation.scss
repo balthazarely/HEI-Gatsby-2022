@@ -1,0 +1,6 @@
+.active--nav {
+  @apply opacity-100;
+}
+.active--nav--mobile {
+  @apply border-b-2 border-theme-base;
+}
